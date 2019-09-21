@@ -1,0 +1,39 @@
+proceso demo;
+  /* Puedes escribir code aqui! */
+  val x = 6;
+  val y_val = 7;
+  var a: int;
+  fun foo(): void;
+    val a = 42;
+    var b: bool;
+  empezar
+    si b entonces
+      si b y no b entonces
+        escribir "Hola, el mundo!"
+      mas
+        escribir "Boo!"
+  fin;
+  fun bar(n: int, b: bool): int;
+    var c: bool;
+    fun fact(n: int): int;
+      si n > 0 entonces
+      empezar
+        fact(n - 1) * n
+      fin
+      mas
+        (y_val + x) mod 2;
+  empezar
+    dejar c = b;
+    mientras c hacer
+    empezar
+      dejar c = no c;
+      foo()
+    fin;
+    fact(n)
+  fin;
+empezar
+  leer "Escribir una numero", a;
+  dejar c2 = bar(a, x <> y_val);
+  escribir "The answer is """, c2--z+c1, """!";
+  leer "Return para terminar"
+fin.
