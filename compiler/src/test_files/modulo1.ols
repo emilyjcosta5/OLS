@@ -1,0 +1,9 @@
+proceso modulo1;
+  val num1 = 6;
+  val num2 = 7;
+  var respuesta: int;
+  empezar
+    dejar respuesta = num1 * num2;
+    escribir "La respuesta es ", respuesta, "!"; 
+  fin;
+fin.

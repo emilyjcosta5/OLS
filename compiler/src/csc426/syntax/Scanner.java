@@ -41,9 +41,9 @@ public class Scanner {
 		keywords.put("empezar", TokenType.BEGIN);
 		keywords.put("fin", TokenType.END);
 		keywords.put("var", TokenType.VAR);
-		keywords.put("int", TokenType.INT);
+		keywords.put("ent", TokenType.INT);
 		keywords.put("bool", TokenType.BOOL);
-		keywords.put("void", TokenType.VOID);
+		keywords.put("vacio", TokenType.VOID);
 		keywords.put("fun", TokenType.FUN);
 		keywords.put("si", TokenType.IF);
 		keywords.put("entonces", TokenType.THEN);
@@ -54,7 +54,7 @@ public class Scanner {
 		keywords.put("y", TokenType.AND);
 		keywords.put("o", TokenType.OR);
 		keywords.put("verdad", TokenType.TRUE);
-		keywords.put("false", TokenType.FALSE);
+		keywords.put("falso", TokenType.FALSE);
 		keywords.put("dejar", TokenType.LET);
 		keywords.put("no", TokenType.NOT);
 
