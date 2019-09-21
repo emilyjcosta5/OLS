@@ -1,0 +1,17 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>shellhacks.ols.fiu</groupId>
+  <artifactId>ols-language</artifactId>
+  <version>1</version>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://github.com/emilyjcosta5/OLS</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+</project>
