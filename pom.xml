@@ -1,8 +1,10 @@
 <project>
+      
   <modelVersion>4.0.0</modelVersion>
   <groupId>shellhacks.ols.fiu</groupId>
   <artifactId>ols-language</artifactId>
   <version>1</version>
+
   <repositories>
     <repository>
       <id>central</id>
@@ -14,4 +16,13 @@
       </snapshots>
     </repository>
   </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.javalin</groupId>
+        <artifactId>javalin</artifactId>
+          <version>3.5.0</version>
+    </dependency>
+  </dependencies>
+
 </project>
