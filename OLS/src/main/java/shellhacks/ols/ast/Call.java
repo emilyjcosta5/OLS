@@ -20,7 +20,7 @@ public class Call extends Expr {
 	public Value call(List<Param> params, Block block, List<Value> as, SymbolTable t) {
 		
 		if (params.size() != as.size()) {
-			System.err.println("The number of parameters does not match with the number of arguemnts in function " + id);
+			System.out.println("The number of parameters does not match with the number of arguemnts in function " + id);
 			System.exit(0);
 		} else {
 			for (int i = 0; i < params.size(); i++) {

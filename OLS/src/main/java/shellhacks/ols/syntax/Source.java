@@ -51,7 +51,7 @@ public class Source {
 				current = (char) next;
 			}
 		} catch (IOException e) {
-			System.err.println("Error: " + e);
+			System.out.println("Error: " + e);
 			System.exit(1);
 		}
 	}

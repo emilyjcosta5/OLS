@@ -19,7 +19,7 @@ public class SymbolTable {
 	public void bind(String id, Value v) {
 		HashMap<String, Value> t = scopes.peek();
 		if (t.containsKey(id)) {
-			System.err.println("Variable " + id + " already exists in the same scope.");
+			System.out.println("Variable " + id + " already exists in the same scope.");
 		} else {
 			t.put(id, v);
 		}

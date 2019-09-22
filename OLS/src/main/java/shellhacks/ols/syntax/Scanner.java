@@ -2,6 +2,7 @@ package ols.syntax;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +30,8 @@ public class Scanner {
 	 * 
 	 * @param in
 	 */
-	public Scanner(Reader in) {
+	public Scanner(String input) {
+		Reader in = new StringReader(input);
 		source = new Source(in);
 		
 		keywords = new HashMap<>();
@@ -146,7 +148,7 @@ public class Scanner {
 				} else if (Character.isWhitespace(source.current)) {
 					source.advance();
 				} else {
-					System.err.println("Unexpected character '" + source.current + "' at line " + source.line + " column " + source.column + " was skipped.");
+					System.out.println("Unexpected character '" + source.current + "' at line " + source.line + " column " + source.column + " was skipped.");
 					source.advance();
 				}
 				break;
@@ -180,7 +182,7 @@ public class Scanner {
 						return new Token(startLine, startColumn, TokenType.ID, lex);
 				// If there is a illegal character, print an error message
 				} else {
-					System.err.println("Unexpected character '" + source.current + "' at line " + source.line + " column " + source.column + " was skipped.");
+					System.out.println("Unexpected character '" + source.current + "' at line " + source.line + " column " + source.column + " was skipped.");
 					source.advance();
 				}
 				break;
@@ -194,7 +196,7 @@ public class Scanner {
 					source.advance();
 				}
 				else {
-					System.err.println("You have to use // for a one-line comment.");
+					System.out.println("You have to use // for a one-line comment.");
 					state = 0;
 				}
 				break;
@@ -207,7 +209,7 @@ public class Scanner {
 				if (source.current == '*')
 					state = 7;
 				else if (source.atEOF) {
-					System.err.println("Comment has to be closed with '*/' before EOF");
+					System.out.println("Comment has to be closed with '*/' before EOF");
 					state = 0;
 				}
 				source.advance();
@@ -218,7 +220,7 @@ public class Scanner {
 				else if (source.current == '*')
 					state = 7;
 				else if (source.atEOF) {
-					System.err.println("Comment has to be closed with '*/' before EOF");
+					System.out.println("Comment has to be closed with '*/' before EOF");
 					state = 0;
 				} else
 					state = 6;
@@ -248,7 +250,7 @@ public class Scanner {
 				if (source.current == '"')
 					state = 12;
 				else if (source.current == '\n')
-					System.err.println("String literal has to end with \"");
+					System.out.println("String literal has to end with \"");
 					// System.exit(1); // Lexical error does not exit the program?
 				else
 					lexeme.append(source.current);

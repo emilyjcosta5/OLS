@@ -30,13 +30,13 @@ public class FunValue extends Value{
 	}
 	
 	public int intValue() {
-		System.err.println("Cannot get int from function value");
+		System.out.println("Cannot get int from function value");
 		System.exit(0);
 		return 0;
 	}
 
 	public boolean boolValue() {
-		System.err.println("Cannot get boolean from function value");
+		System.out.println("Cannot get boolean from function value");
 		System.exit(0);
 		return false;
 	}

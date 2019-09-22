@@ -7,10 +7,21 @@ Created on: 08/21/2019
 
 ## How to run
 
+### Raw `jar` file
+
 ```java
 java -jar run_this.jar modules/modulo1.ols
 ```
 
+### Very simple web interface in Javalin
+
+```bash
+source javalin.sh
+```
+
+Go to [localhost:7000](localhost:7000) and type only valid OSL code to get it executed. (e.g., `proceso test; val a=6; val b=7; empezar escribir a*b fin.`)
+
+## Grammar specification
 
 ```
 <Proceso> -->

@@ -13,7 +13,7 @@ public class IntValue extends Value {
 	}
 
 	public boolean boolValue() {
-		System.err.println("Cannot get a boolean value from int");
+		System.out.println("Cannot get a boolean value from int");
 		System.exit(0);
 		return false;
 	}

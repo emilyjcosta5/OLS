@@ -23,7 +23,7 @@ public class Parser {
 			current = scanner.next();
 			return result;
 		} else {
-			System.err.println("Expected " + type + " but found " + current);
+			System.out.println("Expected " + type + " but found " + current);
 			System.exit(1);
 			return null; // never reaches this
 		}
@@ -146,7 +146,7 @@ public class Parser {
 			match(TokenType.VOID);
 			return Type.Void;
 		} else {
-			System.err.println("Invalid var type: Var type has to be INT, BOOL, or VOID");
+			System.out.println("Invalid var type: Var type has to be INT, BOOL, or VOID");
 			System.exit(1);
 		}
 		
@@ -274,7 +274,7 @@ public class Parser {
 			Expr expr = parseExpr();
 			return new ExprStmt(expr);
 		} else {
-			System.err.println("Invalid statement: " + current);
+			System.out.println("Invalid statement: " + current);
 			System.exit(1);
 		}
 		return null; // unreachable
@@ -318,7 +318,7 @@ public class Parser {
 			Expr expr = parseExpr();
 			return new ExprItem(expr);
 		} else {
-			System.err.println("Invalid item: " + current);
+			System.out.println("Invalid item: " + current);
 			System.exit(1);
 		}
 		return null; // unreachable
@@ -477,7 +477,7 @@ public class Parser {
 			match(TokenType.GT);
 			return Op2.GT;
 		} else {
-			System.err.println("Invalid relational operator: " + current);
+			System.out.println("Invalid relational operator: " + current);
 			System.exit(1);
 		}
 		return null; // unreachable
@@ -499,7 +499,7 @@ public class Parser {
 			match(TokenType.OR);
 			return Op2.Or;
 		} else {
-			System.err.println("Invalid addition operator: " + current);
+			System.out.println("Invalid addition operator: " + current);
 			System.exit(1);
 		}
 		return null; // unreachable
@@ -525,7 +525,7 @@ public class Parser {
 			match(TokenType.AND);
 			return Op2.And;
 		} else {
-			System.err.println("Invalid multiplication operator: " + current);
+			System.out.println("Invalid multiplication operator: " + current);
 			System.exit(1);
 		}
 		return null; // unreachable
@@ -543,7 +543,7 @@ public class Parser {
 			match(TokenType.NOT);
 			return Op1.Not;
 		} else {
-			System.err.println("Invalid unary operator: " + current);
+			System.out.println("Invalid unary operator: " + current);
 			System.exit(1);
 		}
 		return null; // unreachable
@@ -614,7 +614,7 @@ public class Parser {
 			match(TokenType.RPAREN);
 			return expr;
 		} else {
-			System.err.println("Invalid factor: " + current);
+			System.out.println("Invalid factor: " + current);
 			System.exit(1);
 		}
 		return null; // unreachable
