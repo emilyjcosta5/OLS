@@ -1,11 +1,16 @@
 # OLS
-**Otro Lenguaje Simple**
-
-*Another Simple Language*
+**Otra Lenguaje Simple** (Spanish version of [Yet Another Simple Language](https://github.com/ShutoAraki/YASL-Compiler))
 
 Created by: Shuto Araki, Zavien Sibilia, Emily Costa
 
 Created on: 08/21/2019
+
+## How to run
+
+```java
+java -jar run_this.jar modules/modulo1.ols
+```
+
 
 ```
 <Proceso> -->
