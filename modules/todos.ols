@@ -1,0 +1,47 @@
+// Este proceso demuestra como OLS functiona
+proceso demo;
+  /* Puedes escribir code aqui! */
+  val x = 6;
+  val y_val = 7;
+  val z = -120;
+  /* Declarar unas variables */
+  var a: ent;
+  var b: bool;
+  var c1: ent; var c2: ent;
+  /* Declarar unas funciones */
+  fun foo(): vacio;
+    val a = 42; // local en foo
+    var b: bool;
+  empezar
+    dejar c1 = x * y_val;
+    dejar b = a == c1;
+    si b entonces
+      si b y no b entonces
+        escribir "Hola, el mundo!"
+      mas
+        escribir "Boo!"
+  fin;
+  fun bar(n: ent, b: bool): ent;
+    var c: bool;
+    fun fact(n: ent): ent;
+      si n > 0 entonces
+      empezar
+        fact(n - 1) * n
+      fin
+      mas
+        (y_val + x) mod 2;
+  empezar
+    dejar c = b;
+    mientras c hacer
+    empezar
+      dejar c = no c;
+      foo()
+    fin;
+    fact(n)
+  fin;
+empezar
+  leer "Escribir una numero", a;
+  dejar c2 = bar(a, x <> y_val);
+  escribir "The answer is """, c2--z+c1, """!";
+  leer "Return para terminar"
+fin.
